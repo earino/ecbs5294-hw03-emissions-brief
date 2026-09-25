@@ -1,6 +1,6 @@
 # Homework 3 — Handover: the emissions brief
 
-**ECBS5294 — Working with Data · Session 3 · expected time 8–10 hours · due date and late window: on Moodle**
+**ECBS5294 — Working with Data · Session 3 · expected time 8–9 hours · due date and late window: on Moodle**
 
 The estimate assumes you did Labs 5 and 6. It is a planning estimate: this cohort's timings will replace it. If you
 are well past it, post on the Moodle forum — not a mark against you.
@@ -246,8 +246,9 @@ exactly one destination, and a reconciliation compared within a tolerance.
       every record keeps its page — the course site's reference, section 7, *a list inside a record*.
    3. **The page counts**: the records each page promises beside the records your table holds with that page, as
       `silver.worldbank_page_counts`. The count family compares them.
-5. `checks.py`, all four families, one at a time. For every check, make it fail on purpose in a scratch copy before
-   you trust its `pass`.
+5. `checks.py`, all four families, one at a time. Then make **one** family of your choice fail on purpose in a
+   scratch copy (the recipe is under *Try it yourself* above) and paste what it reported into that family's trap-log
+   entry. The grader's harness breaks all four; one by hand is how you learn to read what it will see.
 6. `report.py`: gold, the comparison, the reconciliation table.
 7. `docs/dictionary.md`, then `NOTE.md`.
 8. **The fresh-clone test**: commit, then clone your own project into a new folder and run it from there. It proves
@@ -269,11 +270,11 @@ MIO_T only, 27 members + EU27_2020; 240 ':' retained as NULL"* — not *"cleaner
 ## What you hand in
 
 1. **The pipeline**, running from a fresh clone: the bodies of the three cleaners, `checks.py`, and `report.py`.
-2. **`docs/dictionary.md`** — every silver table, the page counts included: its key, and for every column its type,
-   meaning, unit, allowed values, what missing means, and what was done to it. It is a tracked file on purpose: a
+2. **`docs/dictionary.md`** — the skeleton is supplied, with every silver table and its column names: fill in each
+   table's key and, for every column, its type, meaning, unit, allowed values, what missing means, and what was done to
+   it. Add a row for any column you keep beyond the listed ones. It is a tracked file on purpose: a
    dictionary written into `data/silver/` would not be in your zip.
-3. **`NOTE.md`** — the note, with the reconciliation table and the OWID-versus-Eurostat comparison as its two
-   appendices.
+3. **`NOTE.md`** — the note, with the reconciliation table as its appendix.
 4. **`DIAGNOSIS.md`** — the trap log.
 5. **`REFLECTION.md`** — the end-of-course reflection.
 6. **`AI_USE.md`**, **`GIT_LOG.txt`**, and the zip, made as `SUBMITTING.md` says.
@@ -281,7 +282,7 @@ MIO_T only, 27 members + EU27_2020; 240 ':' retained as NULL"* — not *"cleaner
 
 ## The note
 
-`NOTE.md`, **five to eight sentences**, for a ministry adviser who does not know SQL and will make a decision. It
+`NOTE.md`, **five to nine sentences**, for a ministry adviser who does not know SQL and will make a decision. It
 must say:
 
 - the metric: what is divided by what, for which countries and years, in which unit;
@@ -290,12 +291,12 @@ must say:
 - the assumptions a reader could miss (national denominators for every sector; territorial; land use, international
   aviation and shipping excluded);
 - the reconciliation, in plain words: which totals agree with which, and to what precision;
+- OWID against Eurostat, in one or two sentences: how far apart the two sources' totals are (the median residual, and
+  the largest case), how much of it the two sources' documentation explains, and that the rest is unexplained;
 - **what the data cannot answer**, as a claim about the data: *"this cannot tell you X, because the data has no Y."*
   "More research is needed" is not a claim.
 
-Then two appendices: **A. The reconciliation table** — paste what `report.py` printed. **B. OWID and Eurostat** —
-the residual, summarised (its median and its range across country-years, the largest case), and explained as far as
-the two sources' documentation goes.
+Then one appendix: **A. The reconciliation table** — paste what `report.py` printed.
 
 ## The trap log
 

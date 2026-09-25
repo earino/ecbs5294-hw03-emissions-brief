@@ -28,6 +28,7 @@ explains a column, write *see Trap N* instead of repeating its evidence.
 | `country` | | | | | | |
 | `year` | | | | | | |
 | `ghg_excl_lucf_mt` | | | | | | |
+| *any other column you keep* | | | | | | |
 
 ## `silver.worldbank` — `data/silver/worldbank.parquet`
 
